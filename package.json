@@ -1,0 +1,21 @@
+{
+	"name": "backend-dumplingdelightapp",
+	"version": "1.0.0",
+	"description": "Dumpling Delight is an innovative app designed to enrich the dining experience with a variety of Asian dumplings. It is a gateway to the diverse flavors of Asian cuisine, allowing users to customize their dumplings in terms of filling, wrapping, and cooking method. This app not only caters to individual tastes but also introduces users to the culinary traditions of China, Korea, Japan, India, Nepal and more. It is a step towards cultural discovery and culinary diversity, enhancing societal culinary knowledge. Additionally, the app offers practical benefits like account management, order tracking, and a 2% cashback reward, making it both enjoyable and user-friendly. For administrators, it simplifies tasks such as order management and menu updates, ensuring a seamless operational flow.",
+	"main": "y",
+	"scripts": {
+		"start": "NODE_ENV=production node server",
+		"dev": "nodemon server",
+		"test": "nyc mocha --timeout 10000"
+	},
+	"author": "Raj Kumar Shahu <rajkumarshahu@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"dotenv": "^16.3.2",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.3"
+	}
+}
