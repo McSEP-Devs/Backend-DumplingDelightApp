@@ -1,6 +1,10 @@
 const express = require("express");
 const path = require("path");
 const colors = require("colors");
+const dotenv = require("dotenv");
+
+// Load env variables
+dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
