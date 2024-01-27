@@ -1,0 +1,102 @@
+[
+	{
+		"_id": "602ca11b1a73ee0c87a25841",
+		"name": "Admin Account",
+		"email": "admin@gmail.com",
+		"role": "admin",
+		"password": "123456",
+		"phone": "1234567897",
+		"address": {
+			"streetNumber": 3240,
+			"streetName": "Kingsway Drive",
+			"apartmentNumber": 714,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "N4X 1R5"
+		}
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25842",
+		"name": "John Doe",
+		"email": "john@gmail.com",
+		"password": "123456",
+		"phone": "1894567897",
+		"address": {
+			"streetNumber": 356,
+			"streetName": "Fallofield Avenue",
+			"apartmentNumber": null,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "A4X 1C4"
+		}
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25843",
+		"name": "Amar ambedkar",
+		"email": "amar.ambedkar@gmail.com",
+		"role": "admin",
+		"password": "123456",
+		"phone": "6547891234"
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25844",
+		"name": "Raj Shahu",
+		"email": "raj@gmail.com",
+		"role": "admin",
+		"password": "123456",
+		"phone": "5467891245",
+		"address": {
+			"streetNumber": 565,
+			"streetName": "Greenfield Ave.",
+			"apartmentNumber": 508,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "N2C 2P4"
+		}
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25845",
+		"name": "Greg Harris",
+		"email": "greg@gmail.com",
+		"password": "123456",
+		"phone": "2564781254",
+		"address": {
+			"streetNumber": 3125,
+			"streetName": "College Street",
+			"apartmentNumber": 389,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "Y49 1R5"
+		}
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25846",
+		"name": "Jane Smith",
+		"email": "jane@gmail.com",
+		"password": "123456",
+		"phone": "2354125478",
+		"address": {
+			"streetNumber": 359,
+			"streetName": "Wilson Ave.",
+			"apartmentNumber": 714,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "H3P 5P4"
+		}
+	},
+	{
+		"_id": "602ca11b1a73ee0c87a25847",
+		"name": "Shyam Krishna",
+		"email": "shyam@gmail.com",
+		"password": "123456",
+		"phone": "6547891235",
+		"address": {
+			"streetNumber": 3369,
+			"streetName": "Strasburg Road",
+			"apartmentNumber": 209,
+			"city": "Kitchener",
+			"province": "ON",
+			"postalCode": "R9G 9Y3"
+		}
+	}
+]
