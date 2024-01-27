@@ -1,8 +1,11 @@
 const express = require("express");
 const path = require("path");
 const colors = require("colors");
+const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const errorHandler = require("./middleware/error");
+const cors = require("cors");
 
 // Load env variables
 dotenv.config({ path: "./config/config.env" });
@@ -10,7 +13,34 @@ dotenv.config({ path: "./config/config.env" });
 // Connect to database
 connectDB();
 
+// Route files
+const auth = require("./routes/auth");
+const users = require("./routes/users");
+
 const app = express();
+
+app.use(function (req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header(
+		"Access-Control-Allow-Headers",
+		"Origin, X-Requested-With, Content-Type, Accept, Authorization"
+	);
+	if (req.method === "OPTIONS") {
+		res.header(
+			"Access-Control-Allow-Headers",
+			"Origin, X-Requested-With, Content-Type, Accept, Authorization"
+		);
+		res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
+		return res.status(200).json({});
+	}
+	next();
+});
+
+// Body parser
+app.use(express.json());
+
+// Cookie parser
+app.use(cookieParser());
 
 // @desc    Logs request to console
 const logger = (req, res, next) => {
@@ -24,6 +54,13 @@ app.use(logger);
 
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
+
+// Mount routers
+
+app.use("/auth", auth);
+app.use("/users", users);
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;
 
