@@ -56,7 +56,6 @@ app.use(logger);
 app.use(express.static(path.join(__dirname, "public")));
 
 // Mount routers
-
 app.use("/auth", auth);
 app.use("/users", users);
 
