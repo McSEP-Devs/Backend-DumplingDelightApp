@@ -38,3 +38,17 @@ exports.createItem = asyncHandler(async (req, res, next) => {
 		data: item,
 	});
 });
+
+//@desc        Delete item
+//@route       DELETE /items/:id
+//@access      Private
+exports.deleteItem = asyncHandler(async (req, res, next) => {
+	const item = await Item.findById(req.params.id);
+	if (!item) {
+		return next(
+			new ErrorResponse(`Item not found with id of ${req.params.id}`, 404)
+		);
+	}
+	item.remove();
+	res.status(200).json({ success: true, data: {} });
+});
