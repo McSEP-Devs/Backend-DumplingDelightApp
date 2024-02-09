@@ -17,6 +17,7 @@ connectDB();
 const auth = require("./routes/auth");
 const users = require("./routes/users");
 const items = require("./routes/items");
+const orders = require("./routes/orders");
 
 const app = express();
 
@@ -60,6 +61,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/auth", auth);
 app.use("/users", users);
 app.use("/items", items);
+app.use("/orders", orders);
 
 app.use(errorHandler);
 

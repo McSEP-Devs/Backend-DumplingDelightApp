@@ -22,8 +22,6 @@ const { protect, authorize } = require("../middleware/auth");
 // Re-route into other resource routers
 router.use("/:itemId/orders", orderRouter);
 
-router.route("/:id/photo").put(protect, authorize("admin"), itemPhotoUpload);
-
 router
 	.route("/")
 	.get(advancedResults(Item, "orders"), getItems)

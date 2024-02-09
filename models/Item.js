@@ -37,11 +37,11 @@ const ItemSchema = new mongoose.Schema(
 			type: Date,
 			default: Date.now,
 		},
-		// order: {
-		// 	type: mongoose.Schema.ObjectId,
-		// 	ref: "Order",
-		// 	required: false,
-		// },
+		order: {
+			type: mongoose.Schema.ObjectId,
+			ref: "Order",
+			required: false,
+		},
 		user: {
 			type: mongoose.Schema.ObjectId,
 			ref: "User",
@@ -54,12 +54,12 @@ const ItemSchema = new mongoose.Schema(
 	}
 );
 
-// // Reverse populate with virtuals
-// ItemSchema.virtual("orders", {
-// 	ref: "Order",
-// 	localField: "_id",
-// 	foreignField: "item",
-// 	justOne: false,
-// });
+// Reverse populate with virtuals
+ItemSchema.virtual("orders", {
+	ref: "Order",
+	localField: "_id",
+	foreignField: "item",
+	justOne: false,
+});
 
 module.exports = mongoose.model("Item", ItemSchema);
