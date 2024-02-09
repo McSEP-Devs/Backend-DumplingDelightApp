@@ -16,6 +16,7 @@ connectDB();
 // Route files
 const auth = require("./routes/auth");
 const users = require("./routes/users");
+const items = require("./routes/items");
 
 const app = express();
 
@@ -58,6 +59,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Mount routers
 app.use("/auth", auth);
 app.use("/users", users);
+app.use("/items", items);
 
 app.use(errorHandler);
 

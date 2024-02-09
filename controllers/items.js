@@ -39,6 +39,23 @@ exports.createItem = asyncHandler(async (req, res, next) => {
 	});
 });
 
+//@desc        Update item
+//@route       PUT /items/:id
+//@access      Private
+exports.updateItem = asyncHandler(async (req, res, next) => {
+	const item = await Item.findByIdAndUpdate(req.params.id, req.body, {
+		new: true,
+		runValidators: true,
+	});
+
+	if (!item) {
+		return next(
+			new ErrorResponse(`Item not found with id of ${req.params.id}`, 404)
+		);
+	}
+	res.status(200).json({ success: true, data: item });
+});
+
 //@desc        Delete item
 //@route       DELETE /items/:id
 //@access      Private
