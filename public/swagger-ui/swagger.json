@@ -1,0 +1,798 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Dumpling Delight",
+		"description": "Backend REST API for DumplingDelight App to manage Users, Items, Order and Billing",
+		"version": "1.0.0"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:4000"
+		},
+		{
+			"url": "https://dumplingdelight-api.onrender.com"
+		}
+	],
+	"components": {
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		}
+	},
+	"tags": [
+		{
+			"name": "Authentication",
+			"description": "Routes for user authentication including register, login, reset password...."
+		},
+		{
+			"name": "Users",
+			"description": "CRUD Functionality for users only available to admins"
+		},
+		{
+			"name": "Item",
+			"description": "CRUD Functionality for Items"
+		},
+		{
+			"name": "Order",
+			"description": "CRUD Functionality for Items"
+		},
+		{
+			"name": "Billing",
+			"description": "CRUD Functionality for Items"
+		}
+	],
+	"paths": {
+		"/auth/register": {
+			"post": {
+				"tags": ["Authentication"],
+				"summary": "Register User",
+				"description": "Add user to database with encrypted password",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"name": "Admin123",
+									"email": "admin123@gmail.com",
+									"password": "123456",
+									"phone": "4567194567",
+									"role": "admin",
+									"address": {
+										"streetNumber": 240,
+										"streetName": "Wellesley St E",
+										"apartmentNumber": 256,
+										"city": "Toronto",
+										"province": "ON",
+										"postalCode": "M4X 1R5"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/auth/login": {
+			"post": {
+				"tags": ["Authentication"],
+				"summary": "Login User",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"email": "raj@gmail.com",
+									"password": "123456"
+								}
+							}
+						}
+					}
+				},
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/auth/me": {
+			"get": {
+				"tags": ["Authentication"],
+				"summary": "Get Logged in User via Token",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/auth/logout": {
+			"get": {
+				"tags": ["Authentication"],
+				"summary": "Logout  User",
+				"description": "Clear token cookie",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/users": {
+			"get": {
+				"tags": ["Users"],
+				"summary": "Get All Users (admin)",
+				"description": "Get All Users (admin)",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": ["Users"],
+				"summary": "Create User (admin)",
+				"description": "Add user to database (admin)",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"name": "Jane Doe",
+									"email": "jane1@gmail.com",
+									"password": "1234564",
+									"phone": "1234562317",
+									"address": {
+										"streetNumber": 3240,
+										"streetName": "Kingsway Drive",
+										"apartmentNumber": 714,
+										"city": "Kitchener",
+										"province": "ON",
+										"postalCode": "N4X 1R5"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/users/65c421aaecd51723eea5a283": {
+			"get": {
+				"tags": ["Users"],
+				"summary": "Get Single User (admin)",
+				"description": "Get single user by ID (admin)",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": ["Users"],
+				"summary": "Update User (admin)",
+				"description": "Update user by ID (admin)",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"name": "Update Test"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/users/65b58d40fb8652f842d478ba": {
+			"delete": {
+				"tags": ["Users"],
+				"summary": "Delete User (admin)",
+				"description": "Delete user from database (admin)",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items": {
+			"get": {
+				"tags": ["Item"],
+				"summary": "Sort By Title",
+				"description": "Sort by title",
+				"parameters": [
+					{
+						"name": "sort",
+						"in": "query",
+						"schema": {
+							"type": "string"
+						},
+						"example": "title"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": ["Item"],
+				"summary": "Create New Item",
+				"description": "Add new Item to database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"title": "Pan-Fried Pork Jiaozi (China)",
+									"description": " A classic pan-fried. dumpling with a thinly rolled piece of dough filled with minced pork.",
+									"unitPrice": 12.99,
+									"type": "combo"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items/65c65d852bca8b81cc205565": {
+			"get": {
+				"tags": ["Item"],
+				"summary": "Get Single Item",
+				"description": "Get single Item by id",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": ["Item"],
+				"summary": "Update Item",
+				"description": "Updates Item in database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"quantity": 5
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": ["Item"],
+				"summary": "Delete Item",
+				"description": "Deletes items from database",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items/65c65d852bca8b81cc205565/photo": {
+			"put": {
+				"tags": ["Item"],
+				"summary": "Upload Item Photo",
+				"description": "Route of upload a Item photo",
+				"requestBody": {
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"file": {
+										"type": "string",
+										"format": "binary"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders": {
+			"get": {
+				"tags": ["Order"],
+				"summary": "Get All Orders",
+				"description": "Fetch all Orders from database",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders/6046b01b7c50510015eb3e5e": {
+			"get": {
+				"tags": ["Order"],
+				"summary": "Get Single Order",
+				"description": "Get single Order by id",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items/6044fe337acbc1370a5b649d/orders": {
+			"post": {
+				"tags": ["Order"],
+				"summary": "Create New Order",
+				"description": "Add new Order to database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": ""
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items/602ca11a1a73ee0c87a2583d/orders/6046b01b7c50510015eb3e5e": {
+			"put": {
+				"tags": ["Order"],
+				"summary": "Update Order",
+				"description": "Updates Order in database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"orderType": "pickup"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders/601f0124bef0d51b0f2f5529": {
+			"delete": {
+				"tags": ["Order"],
+				"summary": "Delete Order",
+				"description": "Deletes orders from database",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/billings": {
+			"get": {
+				"tags": ["Billing"],
+				"summary": "Get All Billings",
+				"description": "Fetch all User Billings from database",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/billings/604402011f98e05368926f5d": {
+			"get": {
+				"tags": ["Billing"],
+				"summary": "Get Single Billing",
+				"description": "Get single User Billing by id",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders/6046f5ab3e6c1f0015b1b7b7/billings": {
+			"post": {
+				"tags": ["Billing"],
+				"summary": "Create New Billing",
+				"description": "Add new User Billing to database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": ""
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/billings/604fee5304af8392212f40d8": {
+			"put": {
+				"tags": ["Billing"],
+				"summary": "Update Billing",
+				"description": "Updates User Billing in database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": ""
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/billings/604408c88e85f6720bd7d221": {
+			"delete": {
+				"tags": ["Billing"],
+				"summary": "Delete Billing",
+				"description": "Deletes User Billing from database",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/billings/radius/m4x1g5/0.5": {
+			"get": {
+				"tags": ["Billing"],
+				"summary": "Get User Within a Radius of a Postal Code",
+				"description": "Get user withing a specified radius of a postal code",
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		}
+	}
+}
