@@ -327,8 +327,8 @@
 		"/items": {
 			"get": {
 				"tags": ["Item"],
-				"summary": "Sort By Title",
-				"description": "Sort by title",
+				"summary": "Get All Items",
+				"description": "Get All Items",
 				"parameters": [
 					{
 						"name": "sort",
