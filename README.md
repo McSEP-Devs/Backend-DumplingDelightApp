@@ -1,4 +1,4 @@
-# DumplingDeligt-App-WebServer
+# DumplingDelight-App-WebServer
 
 - Dumpling Delight is an innovative app designed to enrich the dining experience with a variety of Asian dumplings. It is a gateway to the diverse flavors of Asian cuisine, allowing users to customize their dumplings in terms of filling, wrapping, and cooking method including pre-set combos. This app not only caters to individual tastes but also introduces users to the culinary traditions of China, Korea, Japan, India, Nepal and more. It is a step towards cultural discovery and culinary diversity, enhancing societal culinary knowledge. Additionally, the app offers practical benefits like account management, order tracking, and a 2% cashback reward, making it both enjoyable and user-friendly. For administrators, it simplifies tasks such as order management and menu updates, ensuring a seamless operational flow.
 
@@ -31,7 +31,6 @@
 - MongoDB
 - Mongoose
 - Swagger
-- Mocha and Chai
 
 ## Deployment
 
