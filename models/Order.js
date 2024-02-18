@@ -86,7 +86,9 @@ OrderSchema.post("save", async function () {
 	}
 });
 
-// Ensure the model is defined once to avoid OverwriteModelError
-const Order = mongoose.models.Order || mongoose.model("Order", OrderSchema);
+// Call getCashback before remove
+OrderSchema.pre("remove", function () {
+	this.constructor.getCashback(this.user);
+});
 
-module.exports = Order;
+module.exports = mongoose.model("Order", OrderSchema);
