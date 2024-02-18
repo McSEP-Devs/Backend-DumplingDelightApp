@@ -1,0 +1,72 @@
+[
+	{
+		"_id": "602ca11a1a73ee0c87a2583b",
+		"user": "602ca11b1a73ee0c87a25843",
+		"order": "603923ad2e44732db5cd0a7e",
+		"title": "Marinara",
+		"description": "A simple tomato sauce will never go out of style.",
+		"unitPrice": 1.99,
+		"type": "sauce",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "602ca11a1a73ee0c87a2583c",
+		"user": "602ca11b1a73ee0c87a25843",
+		"order": "60392566314d7d2ef1e49175",
+		"title": "Jiaozi (China)",
+		"description": "A classic dumpling with a thinly rolled piece of dough filled with ground meat or vegetables. It can be boiled, steamed, or pan-fried.",
+		"unitPrice": 8.99,
+		"type": "combo",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "602ca11a1a73ee0c87a2583d",
+		"user": "602ca11b1a73ee0c87a25844",
+		"order": "603925a2de8ded2f233f6f99",
+		"title": "Cherry Tomato Couscous Salad",
+		"description": "A mix of jammy roasted cherry tomatoes and juicy fresh ones makes this guy one of my favorite summer salads. With spiced roasted chickpeas, tangy feta, and big pearls of couscous, it’s hearty enough to be a meal on its own.",
+		"unitPrice": 7.99,
+		"type": "salad",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "602ca11a1a73ee0c87a2583e",
+		"user": "602ca11b1a73ee0c87a25844",
+		"order": "603925c4dd5a7d2f498a55eb",
+		"title": "Wonton (China)",
+		"description": "Thin-skinned and often served in broth, with fillings varying by region, including shrimp and pork.",
+		"unitPrice": 9.99,
+		"type": "combo",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "602ca11a1a73ee0c87a2583f",
+		"user": "602ca11b1a73ee0c87a25844",
+		"order": "603925e42cd8122f7c6c62f8",
+		"title": "Chocolate Pudding",
+		"description": "A smooth, creamy, and rich pudding.",
+		"unitPrice": 5.0,
+		"type": "dessert",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "602ca11a1a73ee0c87a25840",
+		"user": "602ca11b1a73ee0c87a25841",
+		"order": "603925fddfcbb32f928e6c8f",
+		"title": "Ginger ale",
+		"description": "A carbonated soft drink flavoured with ginger",
+		"unitPrice": 3.99,
+		"type": "drink",
+		"remainingQuantity": "10"
+	},
+	{
+		"_id": "65d24a7c0b3f9ede830059cb",
+		"user": "602ca11b1a73ee0c87a25844",
+		"order": "603925c4dd5a7d2f498a55eb",
+		"title": "Momos (India / Nepal)",
+		"description": "Steamed dumplings with a filling of ground meat and vegetables, served with a tomato-based sauce.",
+		"unitPrice": 9.99,
+		"type": "combo",
+		"remainingQuantity": "10"
+	}
+]

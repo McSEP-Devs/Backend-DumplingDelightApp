@@ -29,6 +29,11 @@ const ItemSchema = new mongoose.Schema(
 				"combo",
 			],
 		},
+		remainingQuantity: {
+			type: Number,
+			trim: true,
+			default: 1,
+		},
 		image: {
 			type: String,
 			default: "no-photo.jpg",
