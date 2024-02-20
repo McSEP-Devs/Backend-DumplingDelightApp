@@ -26,7 +26,7 @@ exports.getItem = asyncHandler(async (req, res, next) => {
 });
 
 //@desc        Add new item
-//@route       POST /orders/:orderId/items
+//@route       POST /items
 //@access      Private
 exports.createItem = asyncHandler(async (req, res, next) => {
 	// Add user to req,body

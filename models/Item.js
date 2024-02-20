@@ -31,8 +31,8 @@ const ItemSchema = new mongoose.Schema(
 		},
 		remainingQuantity: {
 			type: Number,
+			required: [true, "Remaining quantity required!!!"],
 			trim: true,
-			default: 1,
 		},
 		image: {
 			type: String,
