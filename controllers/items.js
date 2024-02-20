@@ -66,7 +66,7 @@ exports.deleteItem = asyncHandler(async (req, res, next) => {
 			new ErrorResponse(`Item not found with id of ${req.params.id}`, 404)
 		);
 	}
-	item.remove();
+	await item.deleteOne();
 	res.status(200).json({ success: true, data: {} });
 });
 
