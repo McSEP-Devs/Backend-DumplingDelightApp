@@ -113,6 +113,6 @@ exports.deleteOrder = asyncHandler(async (req, res, next) => {
 			new ErrorResponse(`Order not found with id of ${req.params.id}`, 404)
 		);
 	}
-	order.remove();
+	order.deleteOne();
 	res.status(200).json({ success: true, data: {} });
 });
