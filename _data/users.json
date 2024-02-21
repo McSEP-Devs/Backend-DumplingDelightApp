@@ -34,7 +34,6 @@
 		"_id": "602ca11b1a73ee0c87a25843",
 		"name": "Amar ambedkar",
 		"email": "amar.ambedkar@gmail.com",
-		"role": "admin",
 		"password": "123456",
 		"phone": "6547891234"
 	},
@@ -42,7 +41,6 @@
 		"_id": "602ca11b1a73ee0c87a25844",
 		"name": "Raj Shahu",
 		"email": "raj@gmail.com",
-		"role": "admin",
 		"password": "123456",
 		"phone": "5467891245",
 		"address": {

@@ -3,11 +3,12 @@
 		"_id": "602ca11a1a73ee0c87a2583b",
 		"user": "602ca11b1a73ee0c87a25843",
 		"order": "603923ad2e44732db5cd0a7e",
-		"title": "Marinara",
-		"description": "A simple tomato sauce will never go out of style.",
+		"title": "Aromatic Spiced Oil Infusion",
+		"description": "Mustard oil infused with dried red chilies, ginger, and garlic, creating a fragrant and flavorful base for cooking.",
 		"unitPrice": 1.99,
 		"type": "sauce",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a2583b.webp"
 	},
 	{
 		"_id": "602ca11a1a73ee0c87a2583c",
@@ -17,17 +18,19 @@
 		"description": "A classic dumpling with a thinly rolled piece of dough filled with ground meat or vegetables. It can be boiled, steamed, or pan-fried.",
 		"unitPrice": 8.99,
 		"type": "combo",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a2583c.png"
 	},
 	{
 		"_id": "602ca11a1a73ee0c87a2583d",
 		"user": "602ca11b1a73ee0c87a25844",
 		"order": "603925a2de8ded2f233f6f99",
-		"title": "Cherry Tomato Couscous Salad",
-		"description": "A mix of jammy roasted cherry tomatoes and juicy fresh ones makes this guy one of my favorite summer salads. With spiced roasted chickpeas, tangy feta, and big pearls of couscous, it’s hearty enough to be a meal on its own.",
-		"unitPrice": 7.99,
-		"type": "salad",
-		"remainingQuantity": "10"
+		"title": "Fiery Tomato Momo Sauce",
+		"description": "A fiery blend of roasted tomatoes, red and green chilies, garlic, lemon juice, salt, and a hint of sugar, creating a zesty condiment perfect for dipping or drizzling over momos.",
+		"unitPrice": 2.99,
+		"type": "sauce",
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a2583d.webp"
 	},
 	{
 		"_id": "602ca11a1a73ee0c87a2583e",
@@ -37,7 +40,8 @@
 		"description": "Thin-skinned and often served in broth, with fillings varying by region, including shrimp and pork.",
 		"unitPrice": 9.99,
 		"type": "combo",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a2583e.png"
 	},
 	{
 		"_id": "602ca11a1a73ee0c87a2583f",
@@ -47,7 +51,8 @@
 		"description": "A smooth, creamy, and rich pudding.",
 		"unitPrice": 5.0,
 		"type": "dessert",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a2583f.jpeg"
 	},
 	{
 		"_id": "602ca11a1a73ee0c87a25840",
@@ -57,7 +62,8 @@
 		"description": "A carbonated soft drink flavoured with ginger",
 		"unitPrice": 3.99,
 		"type": "drink",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_602ca11a1a73ee0c87a25840.png"
 	},
 	{
 		"_id": "65d24a7c0b3f9ede830059cb",
@@ -67,6 +73,7 @@
 		"description": "Steamed dumplings with a filling of ground meat and vegetables, served with a tomato-based sauce.",
 		"unitPrice": 9.99,
 		"type": "combo",
-		"remainingQuantity": "10"
+		"remainingQuantity": "10",
+		"image": "photo_65d24a7c0b3f9ede830059cb.jpg"
 	}
 ]
