@@ -23,7 +23,6 @@ const ItemSchema = new mongoose.Schema(
 				"filling",
 				"cooking",
 				"sauce",
-				"salad",
 				"drink",
 				"dessert",
 				"combo",
