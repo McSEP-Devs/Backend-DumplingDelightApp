@@ -15,7 +15,7 @@
 		"user": "602ca11b1a73ee0c87a25843",
 		"order": "60392566314d7d2ef1e49175",
 		"title": "Jiaozi (China)",
-		"description": "A classic dumpling with a thinly rolled piece of dough filled with ground meat or vegetables. It can be boiled, steamed, or pan-fried.",
+		"description": "A classic pan fried dumpling with a thinly rolled piece of dough filled with ground chicken.",
 		"unitPrice": 8.99,
 		"type": "combo",
 		"remainingQuantity": "10",
@@ -37,7 +37,7 @@
 		"user": "602ca11b1a73ee0c87a25844",
 		"order": "603925c4dd5a7d2f498a55eb",
 		"title": "Wonton (China)",
-		"description": "Thin-skinned and often served in broth, with fillings varying by region, including shrimp and pork.",
+		"description": "Thin-skinned dumpling with ground pork filling.",
 		"unitPrice": 9.99,
 		"type": "combo",
 		"remainingQuantity": "10",
@@ -58,7 +58,7 @@
 		"_id": "602ca11a1a73ee0c87a25840",
 		"user": "602ca11b1a73ee0c87a25841",
 		"order": "603925fddfcbb32f928e6c8f",
-		"title": "Ginger ale",
+		"title": "Canada Dry",
 		"description": "A carbonated soft drink flavoured with ginger",
 		"unitPrice": 3.99,
 		"type": "drink",
@@ -70,10 +70,220 @@
 		"user": "602ca11b1a73ee0c87a25844",
 		"order": "603925c4dd5a7d2f498a55eb",
 		"title": "Momos (India / Nepal)",
-		"description": "Steamed dumplings with a filling of ground meat and vegetables, served with a tomato-based sauce.",
+		"description": "Steamed dumplings with a filling of ground goat meat and vegetables.",
 		"unitPrice": 9.99,
 		"type": "combo",
 		"remainingQuantity": "10",
 		"image": "photo_65d24a7c0b3f9ede830059cb.jpg"
+	},
+	{
+		"_id": "65d68ff257dc7f0d5696f912",
+		"title": "Gyoza",
+		"description": "Cake flour, bread flour, salt, and water.",
+		"unitPrice": 1.99,
+		"type": "dumpling",
+		"remainingQuantity": 1000,
+		"image": "photo_65d68ff257dc7f0d5696f912.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6999412fc5cd208019d06",
+		"title": "Wonton",
+		"description": "All purpose flour, kansui* (Alkaline preparations), salt, and water.",
+		"unitPrice": 1.99,
+		"type": "dumpling",
+		"remainingQuantity": 1000,
+		"image": "photo_65d6999412fc5cd208019d06.png",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d69c32aa2bc0e68be5cae9",
+		"title": "Shumai",
+		"description": "Cake flour, bread flour, salt, and water (Same as gyoza wrappers)",
+		"unitPrice": 1.99,
+		"type": "dumpling",
+		"remainingQuantity": 1000,
+		"image": "photo_65d69c32aa2bc0e68be5cae9.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d69ded97771bc2454bc4bb",
+		"title": "Rice Paper Wrapper",
+		"description": "Rice flour, tapioca starch, and salt",
+		"unitPrice": 1.99,
+		"type": "dumpling",
+		"remainingQuantity": 1000,
+		"image": "photo_65d69ded97771bc2454bc4bb.png",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d69fb3fccd2278fa13c50b",
+		"title": "Tangy Tomato Chutney",
+		"description": "A zesty blend of roasted tomatoes, chilies, garlic, lemon juice, salt, and sugar, perfect for momos or as a spicy dip.",
+		"unitPrice": 1.49,
+		"type": "sauce",
+		"remainingQuantity": 10,
+		"image": "photo_65d69fb3fccd2278fa13c50b.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6a0f20407b203064fda3b",
+		"title": "Spicy Vinegar Chili Sauce",
+		"description": "A fiery paste made from soaked dried red chilies and garlic, blended with salt, mustard oil, and vinegar, perfect for lovers of spicy cuisine.",
+		"unitPrice": 1.99,
+		"type": "sauce",
+		"remainingQuantity": 10,
+		"image": "photo_65d6a0f20407b203064fda3b.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6a28963358015b6e18d14",
+		"title": "Homemade Specialty Sauce",
+		"description": "An exclusive culinary creation by DumplingDelight, inviting all customers to experience its unique flavors at home.",
+		"unitPrice": 2.99,
+		"type": "sauce",
+		"remainingQuantity": 10,
+		"image": "photo_65d6a28963358015b6e18d14.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6a74254a8db990fb0ddc2",
+		"title": "Angel cake",
+		"description": "A light and fluffy sponge cake made with whipped egg whites, flour, and sugar, known for its airy texture and delicate flavor.",
+		"unitPrice": 3.99,
+		"type": "dessert",
+		"remainingQuantity": 10,
+		"image": "photo_65d6a74254a8db990fb0ddc2.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6a92715e5f22e59e3cbc3",
+		"title": "Blackout cake",
+		"description": "Rich layers of chocolate cake enveloped in decadent chocolate frosting.",
+		"unitPrice": 4.99,
+		"type": "dessert",
+		"remainingQuantity": 10,
+		"image": "photo_65d6a92715e5f22e59e3cbc3.jpg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6aa06055e92c8f27c319e",
+		"title": "White Chocolate Cake Balls",
+		"description": "Indulgent cake crumbs fused with creamy white chocolate, enrobed in a luscious white chocolate coating.",
+		"unitPrice": 2.99,
+		"type": "dessert",
+		"remainingQuantity": 10,
+		"image": "photo_65d6aa06055e92c8f27c319e.jpg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6aaf8a8de9c57b57afd2a",
+		"title": "Jaffa Cakes",
+		"description": "Sponge cakes with orange jelly, coated in chocolate.",
+		"unitPrice": 1.99,
+		"type": "dessert",
+		"remainingQuantity": 10,
+		"image": "photo_65d6aaf8a8de9c57b57afd2a.png",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6ac16bfae2df81315eecf",
+		"title": "Diet Coke",
+		"description": "",
+		"unitPrice": 1.99,
+		"type": "drink",
+		"remainingQuantity": 100,
+		"image": "photo_65d6ac16bfae2df81315eecf.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6acc2d0d9f7489e3d4b9d",
+		"title": "Orange Fanta",
+		"description": "",
+		"unitPrice": 1.99,
+		"type": "drink",
+		"remainingQuantity": 100,
+		"image": "photo_65d6acc2d0d9f7489e3d4b9d.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6ae5b4d3dce3b6b76be3f",
+		"title": "Regular Coke",
+		"description": "",
+		"unitPrice": 1.99,
+		"type": "drink",
+		"remainingQuantity": 100,
+		"image": "photo_65d6ae5b4d3dce3b6b76be3f.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6afa0db0d9957326f156a",
+		"title": "Regular Pepsi",
+		"description": "",
+		"unitPrice": 1.99,
+		"type": "drink",
+		"remainingQuantity": 100,
+		"image": "photo_65d6afa0db0d9957326f156a.avif",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b16442dcac475224ed00",
+		"title": "Steamed",
+		"description": "",
+		"unitPrice": 0.99,
+		"type": "cooking",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b16442dcac475224ed00.webp",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b26d61c4e26e4e1dbc4b",
+		"title": "Boiled",
+		"description": "",
+		"unitPrice": 0.99,
+		"type": "cooking",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b26d61c4e26e4e1dbc4b.jpg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b2d061c4e26e4e1dbc51",
+		"title": "Pan Fried",
+		"description": "",
+		"unitPrice": 0.99,
+		"type": "cooking",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b2d061c4e26e4e1dbc51.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b42ce47b210b15bc1b15",
+		"title": "Ground Pork",
+		"description": "",
+		"unitPrice": 0.99,
+		"type": "filling",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b42ce47b210b15bc1b15.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b60245fcfb9a3a97bee7",
+		"title": "Vegetables",
+		"description": "",
+		"unitPrice": 0.99,
+		"type": "filling",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b60245fcfb9a3a97bee7.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
+	},
+	{
+		"_id": "65d6b70a27bf666b42dab74e",
+		"title": "Chicken",
+		"description": "",
+		"unitPrice": 2.99,
+		"type": "filling",
+		"remainingQuantity": 100,
+		"image": "photo_65d6b70a27bf666b42dab74e.jpeg",
+		"user": "602ca11b1a73ee0c87a25841"
 	}
 ]
