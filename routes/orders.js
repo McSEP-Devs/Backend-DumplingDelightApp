@@ -5,6 +5,7 @@ const {
 	createOrder,
 	updateOrder,
 	deleteOrder,
+	updateOrderQuantityAndTotal,
 } = require("../controllers/orders");
 
 const Order = require("../models/Order");
@@ -25,5 +26,8 @@ router
 	.get(getOrder)
 	.put(protect, authorize("admin", "customer"), updateOrder)
 	.delete(protect, authorize("admin", "customer"), deleteOrder);
+router
+	.route("/:id/updateQuantityAndTotal")
+	.put(protect, authorize("admin", "customer"), updateOrderQuantityAndTotal);
 
 module.exports = router;

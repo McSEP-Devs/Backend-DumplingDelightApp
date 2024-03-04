@@ -91,4 +91,25 @@ OrderSchema.pre("remove", function () {
 	this.constructor.getCashback(this.user);
 });
 
+// OrderSchema.pre("save", async function (next) {
+// 	// Check if quantity is modified or if it's a new order
+// 	if (this.isModified("quantity") || this.isNew) {
+// 		try {
+// 			// Fetch the item associated with this order to get the unit price
+// 			const item = await mongoose.model("Item").findById(this.item);
+// 			if (!item) {
+// 				throw new Error("Item not found");
+// 			}
+// 			console.log("calculating total");
+// 			// Correctly calculate total and assign it to this.total
+// 			this.total = this.quantity * item.unitPrice;
+// 		} catch (err) {
+// 			console.error(err);
+// 			return next(err);
+// 		}
+// 	}
+
+// 	next();
+// });
+
 module.exports = mongoose.model("Order", OrderSchema);

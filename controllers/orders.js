@@ -125,3 +125,56 @@ exports.deleteOrder = asyncHandler(async (req, res, next) => {
 		);
 	}
 });
+
+//@desc        Update Order Quantity and Total
+//@route       put /orders/:id/updateQuantityAndTotal
+//@access      Private
+exports.updateOrderQuantityAndTotal = asyncHandler(async (req, res, next) => {
+	const orderId = req.params.id;
+	let newQuantity = req.body.quantity;
+
+	// Ensure newQuantity is a valid number
+	newQuantity = Number(newQuantity);
+	if (isNaN(newQuantity) || newQuantity <= 0) {
+		return next(new ErrorResponse("Invalid quantity provided", 400));
+	}
+
+	// Fetch the Item document to get unitPrice
+	const order = await Order.findById(orderId);
+	if (!order) {
+		return next(
+			new ErrorResponse(`Order not found with id of ${orderId}`, 404)
+		);
+	}
+
+	const item = await Item.findById(order.item);
+	if (!item || typeof item.unitPrice !== "number" || item.unitPrice <= 0) {
+		return next(
+			new ErrorResponse(
+				`Item not found or invalid unit price for this order`,
+				404
+			)
+		);
+	}
+
+	// Calculate the new total safely
+	const newTotal = newQuantity * item.unitPrice;
+	if (isNaN(newTotal)) {
+		return next(new ErrorResponse("Failed to calculate total", 500));
+	}
+
+	// Update the Order document with the new quantity and total
+	const updatedOrder = await Order.findByIdAndUpdate(
+		orderId,
+		{ quantity: newQuantity, total: newTotal },
+		{ new: true, runValidators: true }
+	);
+
+	if (!updatedOrder) {
+		return next(
+			new ErrorResponse(`Unable to update order with id of ${orderId}`, 404)
+		);
+	}
+
+	res.status(200).json({ success: true, data: updatedOrder });
+});
