@@ -18,7 +18,7 @@
 		"description": "A classic pan fried dumpling with a thinly rolled piece of dough filled with ground chicken.",
 		"unitPrice": 8.99,
 		"type": "combo",
-		"remainingQuantity": "10",
+		"remainingQuantity": "0",
 		"image": "photo_602ca11a1a73ee0c87a2583c.png"
 	},
 	{
@@ -40,7 +40,7 @@
 		"description": "Thin-skinned dumpling with ground pork filling.",
 		"unitPrice": 9.99,
 		"type": "combo",
-		"remainingQuantity": "10",
+		"remainingQuantity": "0",
 		"image": "photo_602ca11a1a73ee0c87a2583e.png"
 	},
 	{
@@ -73,7 +73,7 @@
 		"description": "Steamed dumplings with a filling of ground goat meat and vegetables.",
 		"unitPrice": 9.99,
 		"type": "combo",
-		"remainingQuantity": "10",
+		"remainingQuantity": "0",
 		"image": "photo_65d24a7c0b3f9ede830059cb.jpg"
 	},
 	{

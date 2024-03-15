@@ -24,9 +24,9 @@ const users = JSON.parse(
 	fs.readFileSync(`${__dirname}/_data/users.json`, "utf-8")
 );
 
-const orders = JSON.parse(
-	fs.readFileSync(`${__dirname}/_data/orders.json`, "utf-8")
-);
+// const orders = JSON.parse(
+// 	fs.readFileSync(`${__dirname}/_data/orders.json`, "utf-8")
+// );
 
 const billings = JSON.parse(
 	fs.readFileSync(`${__dirname}/_data/billings.json`, "utf-8")
@@ -37,7 +37,7 @@ const importData = async () => {
 	try {
 		await Item.create(items);
 		await User.create(users);
-		await Order.create(orders);
+		// await Order.create(orders);
 		await Billing.create(billings);
 		console.log("Data Imported...".green.inverse);
 		process.exit();

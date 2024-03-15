@@ -78,10 +78,11 @@
 							"schema": {
 								"type": "object",
 								"example": {
-									"title": "Pan-Fried Pork Jiaozi (China)",
-									"description": " A classic pan-fried. dumpling with a thinly rolled piece of dough filled with minced pork.",
-									"unitPrice": 12.99,
-									"type": "combo"
+									"title": "TestItem",
+									"description": " This is for testing purposes",
+									"unitPrice": "12.99",
+									"type": "combo",
+									"remainingQuantity": "10"
 								}
 							}
 						}
@@ -127,6 +128,26 @@
 					}
 				}
 			},
+			"delete": {
+				"tags": ["Item"],
+				"summary": "Delete Item",
+				"description": "Deletes items from database",
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/items/602ca11a1a73ee0c87a2583c": {
 			"put": {
 				"tags": ["Item"],
 				"summary": "Update Item",
@@ -137,7 +158,7 @@
 							"schema": {
 								"type": "object",
 								"example": {
-									"quantity": 5
+									"remainingQuantity": 20
 								}
 							}
 						}
@@ -167,27 +188,9 @@
 						}
 					}
 				}
-			},
-			"delete": {
-				"tags": ["Item"],
-				"summary": "Delete Item",
-				"description": "Deletes items from database",
-				"security": [
-					{
-						"bearerAuth": []
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "Successful response",
-						"content": {
-							"application/json": {}
-						}
-					}
-				}
 			}
 		},
-		"/items/65c65d852bca8b81cc205565/photo": {
+		"/items/65d6aaf8a8de9c57b57afd2a/photo": {
 			"put": {
 				"tags": ["Item"],
 				"summary": "Upload Item Photo",
@@ -210,17 +213,6 @@
 				"security": [
 					{
 						"bearerAuth": []
-					}
-				],
-				"parameters": [
-					{
-						"name": "Content-Type",
-						"in": "header",
-						"schema": {
-							"type": "string"
-						},
-						"description": "JSON Type",
-						"example": "application/json"
 					}
 				],
 				"responses": {
@@ -248,7 +240,7 @@
 				}
 			}
 		},
-		"/orders/6046b01b7c50510015eb3e5e": {
+		"/orders/65e4f54d18a5c3b3d9e55b66": {
 			"get": {
 				"tags": ["Order"],
 				"summary": "Get Single Order",
@@ -263,7 +255,7 @@
 				}
 			}
 		},
-		"/items/6044fe337acbc1370a5b649d/orders": {
+		"/items/602ca11a1a73ee0c87a2583c/orders": {
 			"post": {
 				"tags": ["Order"],
 				"summary": "Create New Order",
@@ -273,49 +265,9 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
-								"example": ""
-							}
-						}
-					}
-				},
-				"security": [
-					{
-						"bearerAuth": []
-					}
-				],
-				"parameters": [
-					{
-						"name": "Content-Type",
-						"in": "header",
-						"schema": {
-							"type": "string"
-						},
-						"description": "JSON Type",
-						"example": "application/json"
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "Successful response",
-						"content": {
-							"application/json": {}
-						}
-					}
-				}
-			}
-		},
-		"/items/602ca11a1a73ee0c87a2583d/orders/6046b01b7c50510015eb3e5e": {
-			"put": {
-				"tags": ["Order"],
-				"summary": "Update Order",
-				"description": "Updates Order in database",
-				"requestBody": {
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
 								"example": {
-									"orderType": "pickup"
+									"orderType": "pickup",
+									"quantity": 1
 								}
 							}
 						}
@@ -347,7 +299,93 @@
 				}
 			}
 		},
-		"/orders/601f0124bef0d51b0f2f5529": {
+		"/items/65d24a7c0b3f9ede830059cb/orders/65e4f54d18a5c3b3d9e55b66": {
+			"put": {
+				"tags": ["Order"],
+				"summary": "Update Order",
+				"description": "Updates Order in database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"quantity": 2
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders/65e4f54d18a5c3b3d9e55b66/updateQuantityAndTotal": {
+			"put": {
+				"tags": ["Order"],
+				"summary": "Update Order Quantity and Total",
+				"description": "Updates Order Quantity and Total in the database",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"example": {
+									"quantity": 4
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"schema": {
+							"type": "string"
+						},
+						"description": "JSON Type",
+						"example": "application/json"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {}
+						}
+					}
+				}
+			}
+		},
+		"/orders/603923ad2e44732db5cd0a7e": {
 			"delete": {
 				"tags": ["Order"],
 				"summary": "Delete Order",
@@ -397,7 +435,7 @@
 				}
 			}
 		},
-		"/orders/6046f5ab3e6c1f0015b1b7b7/billings": {
+		"/orders/65e620d033526942492f9e3b/billings": {
 			"post": {
 				"tags": ["Billing"],
 				"summary": "Create New Billing",
@@ -407,7 +445,9 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
-								"example": ""
+								"example": {
+									"address": "389-3125 College Street, Kitchener, ON"
+								}
 							}
 						}
 					}
@@ -579,7 +619,7 @@
 							"schema": {
 								"type": "object",
 								"example": {
-									"email": "raj@gmail.com",
+									"email": "admin@gmail.com",
 									"password": "123456"
 								}
 							}
@@ -688,10 +728,11 @@
 							"schema": {
 								"type": "object",
 								"example": {
-									"name": "Jane Doe",
-									"email": "jane1@gmail.com",
+									"name": "Admin Admin",
+									"email": "admin@gmail.com",
 									"password": "1234564",
 									"phone": "1234562317",
+									"role": "admin",
 									"address": {
 										"streetNumber": 3240,
 										"streetName": "Kingsway Drive",
