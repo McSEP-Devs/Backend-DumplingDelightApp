@@ -80,3 +80,21 @@ const server = app.listen(
 			.bold
 	)
 );
+// Promise.reject(new Error("Test Unhandled Rejection"));
+
+// Handle unhandled promise rejections
+// process.on("unhandledRejection", (err, promise) => {
+// 	console.log(`Error: ${err.message}`.red);
+// 	// Close server & exit process
+// 	server.close(() => process.exit(1));
+// });
+
+process.on("SIGINT", () => {
+	console.log("SIGINT signal received. Closing server...");
+	server.close(() => {
+		console.log("Server closed. Exiting process.");
+		process.exit(0); // Exit code 0 indicates a normal exit
+	});
+});
+
+module.exports = server;
